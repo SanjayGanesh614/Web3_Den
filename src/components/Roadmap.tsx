@@ -36,8 +36,8 @@ const Roadmap = () => {
       phase: "PHASE 01",
       title: "FOUNDATION",
       status: "IN PROGRESS",
-      description: "Platform infrastructure, smart contracts deployment, and initial game prototypes.",
-      features: ["Cyfrin Updraft Blockchain Basics Course", "Solidity Basics"]
+      description: "Platform infrastructure, smart contracts deployment.",
+      features: ["Cyfrin Updraft Blockchain Basics Course", "Blockchain Fundamentals by Chainlink", "Solidity Basics"]
     },
     {
       phase: "PHASE 02", 
@@ -178,12 +178,12 @@ const Roadmap = () => {
                 Ready to Shape the Future?
               </h3>
               <p className="text-muted-foreground mb-6">
-                Join our community of visionary gamers and builders. Together, we'll redefine 
-                what's possible in the Web3 gaming universe.
+                Join our Web3 community—where innovators, explorers, and future-builders connect, learn, and grow together.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <button className="px-6 py-3 bg-primary hover:bg-primary/90 text-primary-foreground rounded-lg gaming-glow smooth-transition">
-                  Join Community
+                <button className="px-6 py-3 bg-primary hover:bg-primary/90 text-primary-foreground rounded-lg gaming-glow smooth-transition"
+                onClick={() => window.open("https://instagram.com/barade_sanjay", "_blank")}>
+                  Connect on Instagram
                 </button>
                 <button className="px-6 py-3 border border-accent text-accent hover:bg-accent/10 rounded-lg smooth-transition">
                   View Documentation

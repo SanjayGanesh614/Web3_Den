@@ -8,11 +8,7 @@ const PhotoGallery = () => {
     src: "/lovable-uploads/db7338b2-914a-4395-bd67-cdc3a7465822.png",
     title: "Our Team",
     description: "The visionaries behind Web3 Den"
-  }, {
-    src: "https://images.unsplash.com/photo-1518709268805-4e9042af2176?w=800&h=600&fit=crop&crop=center",
-    title: "Cyberpunk City",
-    description: "Neon-lit urban adventures"
-  }, {
+  },{
     src: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&h=600&fit=crop&crop=center",
     title: "Digital Realms",
     description: "Endless virtual worlds to explore"
