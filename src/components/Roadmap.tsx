@@ -1,6 +1,15 @@
 import { useEffect, useRef } from "react";
 import { Card, CardContent } from "@/components/ui/card";
 
+interface RoadmapItem {
+  phase: string;
+  title: string;
+  status: string;
+  description: string;
+  features: string[];
+  locked?: boolean;
+}
+
 const Roadmap = () => {
   const roadmapRef = useRef<HTMLDivElement>(null);
 
@@ -22,34 +31,37 @@ const Roadmap = () => {
     return () => observer.disconnect();
   }, []);
 
-  const roadmapItems = [
+  const roadmapItems: RoadmapItem[] = [
     {
       phase: "PHASE 01",
       title: "FOUNDATION",
-      status: "COMPLETED",
+      status: "IN PROGRESS",
       description: "Platform infrastructure, smart contracts deployment, and initial game prototypes.",
-      features: ["Core Platform Launch", "NFT Marketplace", "Wallet Integration", "Community Building"]
+      features: ["Core Platform Launch", "NFT Marketplace", "Wallet Integration", "Community Building", "Cyfrin updraft", "Blockchain basics course", "Solidity basic"]
     },
     {
       phase: "PHASE 02", 
       title: "EXPANSION",
-      status: "IN PROGRESS",
-      description: "Multi-chain integration, advanced gaming features, and strategic partnerships.",
-      features: ["Cross-Chain Support", "Advanced Guilds", "Tournament System", "Mobile App Beta"]
+      status: "LOCKED",
+      description: "",
+      features: [],
+      locked: true
     },
     {
       phase: "PHASE 03",
       title: "EVOLUTION",
-      status: "Q2 2024",
-      description: "Metaverse integration, AI-powered NPCs, and decentralized governance implementation.",
-      features: ["Metaverse Portal", "AI Game Masters", "DAO Governance", "VR Integration"]
+      status: "LOCKED",
+      description: "",
+      features: [],
+      locked: true
     },
     {
       phase: "PHASE 04",
       title: "TRANSCENDENCE", 
-      status: "Q4 2024",
-      description: "Full ecosystem maturity with interoperable assets and limitless gaming possibilities.",
-      features: ["Universal Assets", "Quantum Gaming", "Reality Bridge", "Infinite Worlds"]
+      status: "LOCKED",
+      description: "",
+      features: [],
+      locked: true
     }
   ];
 
@@ -83,40 +95,63 @@ const Roadmap = () => {
                   <div className={`w-5/12 ${index % 2 === 0 ? 'pr-8' : 'pl-8'}`}>
                     <Card className="glass-morphism cyber-shadow smooth-transition hover:scale-105">
                       <CardContent className="p-6">
-                        <div className="mb-4">
-                          <div className="flex items-center justify-between mb-2">
-                            <span className="text-sm font-semibold text-accent">
-                              {item.phase}
-                            </span>
-                            <span className={`text-xs px-3 py-1 rounded-full ${
-                              item.status === 'COMPLETED' 
-                                ? 'bg-green-500/20 text-green-400' 
-                                : item.status === 'IN PROGRESS'
-                                ? 'bg-primary/20 text-primary'
-                                : 'bg-muted/20 text-muted-foreground'
-                            }`}>
-                              {item.status}
-                            </span>
-                          </div>
-                          <h3 className="text-2xl font-bold text-gradient-primary mb-3">
-                            {item.title}
-                          </h3>
-                          <p className="text-muted-foreground mb-4">
-                            {item.description}
-                          </p>
-                        </div>
-                        
-                        <div className="space-y-2">
-                          {item.features.map((feature, featureIndex) => (
-                            <div 
-                              key={featureIndex}
-                              className="flex items-center text-sm"
-                            >
-                              <div className="w-2 h-2 bg-primary rounded-full mr-3 animate-glow-pulse"></div>
-                              <span className="text-muted-foreground">{feature}</span>
+                        {item.locked ? (
+                          <div className="text-center">
+                            <div className="mb-4">
+                              <span className="text-sm font-semibold text-accent">
+                                {item.phase}
+                              </span>
                             </div>
-                          ))}
-                        </div>
+                            <h3 className="text-2xl font-bold text-gradient-primary mb-6">
+                              {item.title}
+                            </h3>
+                            <div className="flex justify-center mb-4">
+                              <svg className="w-12 h-12 text-muted-foreground" fill="currentColor" viewBox="0 0 20 20">
+                                <path fillRule="evenodd" d="M5 9V7a5 5 0 0110 0v2a2 2 0 012 2v5a2 2 0 01-2 2H5a2 2 0 01-2-2v-5a2 2 0 012-2zm8-2v2H7V7a3 3 0 016 0z" clipRule="evenodd" />
+                              </svg>
+                            </div>
+                            <p className="text-muted-foreground text-sm">
+                              Complete Phase 1 to unlock
+                            </p>
+                          </div>
+                        ) : (
+                          <>
+                            <div className="mb-4">
+                              <div className="flex items-center justify-between mb-2">
+                                <span className="text-sm font-semibold text-accent">
+                                  {item.phase}
+                                </span>
+                                <span className={`text-xs px-3 py-1 rounded-full ${
+                                  item.status === 'COMPLETED' 
+                                    ? 'bg-green-500/20 text-green-400' 
+                                    : item.status === 'IN PROGRESS'
+                                    ? 'bg-primary/20 text-primary'
+                                    : 'bg-muted/20 text-muted-foreground'
+                                }`}>
+                                  {item.status}
+                                </span>
+                              </div>
+                              <h3 className="text-2xl font-bold text-gradient-primary mb-3">
+                                {item.title}
+                              </h3>
+                              <p className="text-muted-foreground mb-4">
+                                {item.description}
+                              </p>
+                            </div>
+                            
+                            <div className="space-y-2">
+                              {item.features.map((feature, featureIndex) => (
+                                <div 
+                                  key={featureIndex}
+                                  className="flex items-center text-sm"
+                                >
+                                  <div className="w-2 h-2 bg-primary rounded-full mr-3 animate-glow-pulse"></div>
+                                  <span className="text-muted-foreground">{feature}</span>
+                                </div>
+                              ))}
+                            </div>
+                          </>
+                        )}
                       </CardContent>
                     </Card>
                   </div>

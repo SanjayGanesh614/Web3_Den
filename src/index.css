@@ -20,10 +20,10 @@ All colors MUST be HSL.
     --popover: 240 20% 10%;
     --popover-foreground: 280 15% 90%;
 
-    /* Primary - Electric Purple */
-    --primary: 280 100% 70%;
+    /* Primary - Neon Purple */
+    --primary: 285 100% 65%;
     --primary-foreground: 240 15% 6%;
-    --primary-glow: 285 100% 80%;
+    --primary-glow: 290 100% 75%;
 
     /* Secondary - Deep Space */
     --secondary: 240 25% 15%;
@@ -33,10 +33,10 @@ All colors MUST be HSL.
     --muted: 240 15% 12%;
     --muted-foreground: 280 10% 60%;
 
-    /* Accent - Cyan highlights */
-    --accent: 180 100% 70%;
+    /* Accent - Electric Blue */
+    --accent: 200 100% 60%;
     --accent-foreground: 240 15% 6%;
-    --accent-glow: 185 100% 80%;
+    --accent-glow: 205 100% 70%;
 
     /* Destructive states */
     --destructive: 0 84.2% 60.2%;
