@@ -1,12 +1,26 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import Hero from "@/components/Hero";
+import TeamSection from "@/components/TeamSection";
+import PhotoGallery from "@/components/PhotoGallery";
+import Roadmap from "@/components/Roadmap";
+import ScrollAnimations from "@/components/ScrollAnimations";
 
 const Index = () => {
   return (
-    <div className="min-h-screen flex items-center justify-center bg-background">
-      <div className="text-center">
-        <h1 className="text-4xl font-bold mb-4">Welcome to Your Blank App</h1>
-        <p className="text-xl text-muted-foreground">Start building your amazing project here!</p>
-      </div>
+    <div className="min-h-screen space-background">
+      <ScrollAnimations />
+      <Hero />
+      <TeamSection />
+      <PhotoGallery />
+      <Roadmap />
+      
+      {/* Footer */}
+      <footer className="py-12 border-t border-border/20">
+        <div className="container mx-auto px-6 text-center">
+          <p className="text-muted-foreground">
+            © 2024 Web3 Den. Built for the future of gaming.
+          </p>
+        </div>
+      </footer>
     </div>
   );
 };
