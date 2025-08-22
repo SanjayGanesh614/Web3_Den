@@ -30,21 +30,6 @@ const Hero = () => {
             and every victory shapes the digital universe.
           </p>
           
-          <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
-            <Button 
-              size="lg" 
-              className="bg-primary hover:bg-primary/90 text-primary-foreground gaming-glow px-8 py-4 text-lg font-semibold smooth-transition"
-            >
-              Enter the Den
-            </Button>
-            <Button 
-              variant="outline" 
-              size="lg" 
-              className="border-accent text-accent hover:bg-accent/10 px-8 py-4 text-lg font-semibold smooth-transition"
-            >
-              Explore Universe
-            </Button>
-          </div>
         </div>
       </div>
 
