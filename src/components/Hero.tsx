@@ -15,7 +15,7 @@ const Hero = () => {
         <div className="animate-fade-in">
           <div className="mb-8">
             <h1 className="text-6xl md:text-8xl font-bold mb-4 text-gradient-primary tracking-wider">
-              CONGRATS
+              CONGRATULATIONS!!
             </h1>
             <h2 className="text-4xl md:text-6xl font-light mb-6 text-gradient-accent">
               ON FINDING THE
@@ -26,8 +26,8 @@ const Hero = () => {
           </div>
           
           <p className="text-xl md:text-2xl text-muted-foreground mb-12 max-w-3xl mx-auto leading-relaxed">
-            Welcome to the future of gaming. Step into a realm where blockchain meets immersive gameplay, 
-            and every victory shapes the digital universe.
+            Welcome to the Web3 Den—where you own your data, explore decentralization, and step into the future of the internet. Join us in building a more open, secure, and user-centric digital world.
+            The website is Under Development. Stay Tuned for Updates!
           </p>
           
         </div>

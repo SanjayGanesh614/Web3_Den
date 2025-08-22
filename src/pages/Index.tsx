@@ -17,7 +17,7 @@ const Index = () => {
       <footer className="py-12 border-t border-border/20">
         <div className="container mx-auto px-6 text-center">
           <p className="text-muted-foreground">
-            © 2024 Web3 Den. Built for the future of gaming.
+            © 2025 Web3 Den. Built for the future of Computing.
           </p>
         </div>
       </footer>

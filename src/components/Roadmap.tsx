@@ -37,7 +37,7 @@ const Roadmap = () => {
       title: "FOUNDATION",
       status: "IN PROGRESS",
       description: "Platform infrastructure, smart contracts deployment, and initial game prototypes.",
-      features: ["Core Platform Launch", "NFT Marketplace", "Wallet Integration", "Community Building", "Cyfrin updraft", "Blockchain basics course", "Solidity basic"]
+      features: ["Cyfrin Updraft Blockchain Basics Course", "Solidity Basics"]
     },
     {
       phase: "PHASE 02", 
@@ -74,7 +74,7 @@ const Roadmap = () => {
           </h2>
           <div className="w-24 h-1 bg-gradient-to-r from-primary to-accent mx-auto mb-8"></div>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Our journey through the digital cosmos, unlocking new dimensions of gaming excellence
+            Master these future-ready skills—your ultimate roadmap to ace the CK interview and lead in the Web3 era.
           </p>
         </div>
 
