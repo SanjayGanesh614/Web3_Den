@@ -3,11 +3,11 @@ import { Card } from "@/components/ui/card";
 const PhotoGallery = () => {
   const [currentImage, setCurrentImage] = useState(0);
 
-  // Placeholder images - you can replace these with actual game screenshots
+  // Team and platform images
   const images = [{
-    src: "https://images.unsplash.com/photo-1542751371-adc38448a05e?w=800&h=600&fit=crop&crop=center",
-    title: "Space Combat Arena",
-    description: "Epic battles across the galaxy"
+    src: "/lovable-uploads/db7338b2-914a-4395-bd67-cdc3a7465822.png",
+    title: "Our Team",
+    description: "The visionaries behind Web3 Den"
   }, {
     src: "https://images.unsplash.com/photo-1518709268805-4e9042af2176?w=800&h=600&fit=crop&crop=center",
     title: "Cyberpunk City",
