@@ -198,8 +198,8 @@ const Roadmap = () => {
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <button className="px-6 py-3 bg-primary hover:bg-primary/90 text-primary-foreground rounded-lg gaming-glow smooth-transition"
-                onClick={() => window.open("https://instagram.com/barade_sanjay", "_blank")}>
-                  Connect on Instagram
+                onClick={() => window.open("https://chat.whatsapp.com/Jqx3lGV1cLJH27YVC8WNUM?mode=ems_copy_t", "_blank")}>
+                  Connect on WhatsApp
                 </button>
                 <button className="px-6 py-3 bg-primary hover:bg-primary/90 text-primary-foreground rounded-lg gaming-glow smooth-transition"
                 onClick={() => window.open("https://roadmap.sh/blockchain", "_blank")}>
