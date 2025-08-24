@@ -11,8 +11,14 @@ const CTAModal = ({ isOpen, onClose }: CTAModalProps) => {
   if (!isOpen) return null;
 
   return (
-    <div className="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4">
-      <div className="relative max-w-md w-full">
+    <div 
+      className="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4"
+      onClick={onClose}
+    >
+      <div 
+        className="relative max-w-md w-full"
+        onClick={(e) => e.stopPropagation()}
+      >
         <Card className="glass-morphism cyber-shadow border-2 border-primary/30">
           <CardContent className="p-8">
             {/* Close Button */}

@@ -40,7 +40,7 @@ const Roadmap = () => {
       title: "FOUNDATION",
       status: "IN PROGRESS",
       description: "Platform infrastructure, Smart Contracts Deployment.",
-      features: ["Cyfrin Updraft Blockchain Basics Course", "Blockchain Fundamentals by Chainlink", "Solidity Basics"]
+      features: ["Cyfrin Updraft Blockchain Basics Course", "Solidity Basics"]
     },
     {
       phase: "PHASE 02", 

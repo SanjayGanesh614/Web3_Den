@@ -34,8 +34,14 @@ const Phase1Modal = ({ isOpen, onClose }: Phase1ModalProps) => {
   };
 
   return (
-    <div className="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4">
-      <div className="relative max-w-4xl w-full max-h-[80vh] overflow-y-auto">
+    <div 
+      className="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4"
+      onClick={onClose}
+    >
+      <div 
+        className="relative max-w-4xl w-full max-h-[80vh] overflow-y-auto"
+        onClick={(e) => e.stopPropagation()}
+      >
         <Card className="glass-morphism cyber-shadow border-2 border-primary/30">
           <CardContent className="p-8">
             {/* Close Button */}
@@ -85,7 +91,7 @@ const Phase1Modal = ({ isOpen, onClose }: Phase1ModalProps) => {
                   onClick={() => window.open("https://updraft.cyfrin.io/courses/blockchain-basics", "_blank")}
                 >
                   <div className="w-2 h-2 bg-primary rounded-full mr-3 animate-glow-pulse flex-shrink-0"></div>
-                  <span>Cyfrin Updraft Blockchain Basics Course</span>
+                  <span>Blockchain Basics</span>
                 </Button>
                 
                 <Button
@@ -103,7 +109,7 @@ const Phase1Modal = ({ isOpen, onClose }: Phase1ModalProps) => {
                   onClick={() => window.open("https://updraft.cyfrin.io/courses/solidity", "_blank")}
                 >
                   <div className="w-2 h-2 bg-primary rounded-full mr-3 animate-glow-pulse flex-shrink-0"></div>
-                  <span>Solidity Basics & Smart Contract Development</span>
+                  <span>Solidity Basics</span>
                 </Button>
 
                 <Button
