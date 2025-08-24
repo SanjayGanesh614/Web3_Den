@@ -203,7 +203,7 @@ const Roadmap = () => {
                 </button>
                 <button className="px-6 py-3 bg-primary hover:bg-primary/90 text-primary-foreground rounded-lg gaming-glow smooth-transition"
                 onClick={() => window.open("https://roadmap.sh/blockchain", "_blank")}>
-                  View Documentation
+                  View Web3 Roadmap
                 </button>
               </div>
             </CardContent>
