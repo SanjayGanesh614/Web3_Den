@@ -90,11 +90,12 @@ const Roadmap = () => {
                   index % 2 === 0 ? 'scroll-slide-left' : 'scroll-slide-right'
                 }`}
               >
-                <div className={`flex items-center ${index % 2 === 0 ? 'flex-row' : 'flex-row-reverse'}`}>
+                <div className={`flex flex-col md:flex-row items-center
+        ${index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'}`}>
                   {/* Content Card */}
-                  <div className={`w-5/12 ${index % 2 === 0 ? 'pr-8' : 'pl-8'}`}>
+                  <div className="w-full md:w-5/12 md:pr-8 md:pl-0 mb-8 md:mb-0">
                     <Card className="glass-morphism cyber-shadow smooth-transition hover:scale-105">
-                      <CardContent className="p-6">
+                      <CardContent className="p-4 md:p-6">
                         {item.locked ? (
                           <div className="text-center">
                             <div className="mb-4">
@@ -102,11 +103,11 @@ const Roadmap = () => {
                                 {item.phase}
                               </span>
                             </div>
-                            <h3 className="text-2xl font-bold text-gradient-primary mb-6">
+                            <h3 className="text-xl md:text-2xl font-bold text-gradient-primary mb-6">
                               {item.title}
                             </h3>
                             <div className="flex justify-center mb-4">
-                              <svg className="w-12 h-12 text-muted-foreground" fill="currentColor" viewBox="0 0 20 20">
+                              <svg className="w-10 h-10 md:w-12 md:h-12 text-muted-foreground" fill="currentColor" viewBox="0 0 20 20">
                                 <path fillRule="evenodd" d="M5 9V7a5 5 0 0110 0v2a2 2 0 012 2v5a2 2 0 01-2 2H5a2 2 0 01-2-2v-5a2 2 0 012-2zm8-2v2H7V7a3 3 0 016 0z" clipRule="evenodd" />
                               </svg>
                             </div>
@@ -131,10 +132,10 @@ const Roadmap = () => {
                                   {item.status}
                                 </span>
                               </div>
-                              <h3 className="text-2xl font-bold text-gradient-primary mb-3">
+                              <h3 className="text-xl md:text-2xl font-bold text-gradient-primary mb-3">
                                 {item.title}
                               </h3>
-                              <p className="text-muted-foreground mb-4">
+                              <p className="text-muted-foreground mb-4 text-sm md:text-base">
                                 {item.description}
                               </p>
                             </div>
@@ -157,13 +158,13 @@ const Roadmap = () => {
                   </div>
 
                   {/* Center Node */}
-                  <div className="relative z-10 w-2/12 flex justify-center">
+                  <div className="relative z-10 w-full md:w-2/12 flex justify-center">
                     <div className="w-6 h-6 bg-primary rounded-full gaming-glow animate-glow-pulse border-4 border-background">
                     </div>
                   </div>
 
                   {/* Spacer */}
-                  <div className="w-5/12"></div>
+                  <div className="w-full md:w-5/12"></div>
                 </div>
               </div>
             ))}

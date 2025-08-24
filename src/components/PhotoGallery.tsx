@@ -9,9 +9,9 @@ const PhotoGallery = () => {
     title: "Our Team",
     description: "The visionaries behind Web3 Den"
   },{
-    src: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&h=600&fit=crop&crop=center",
-    title: "Digital Realms",
-    description: "Endless virtual worlds to explore"
+    src: "/lovable-uploads/core pic.JPG",
+    title: "CK Core Team",
+    description: "Meet the visionaries powering our Web3 journey"
   }];
   useEffect(() => {
     const timer = setInterval(() => {
