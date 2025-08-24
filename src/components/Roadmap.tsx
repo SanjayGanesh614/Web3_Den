@@ -1,5 +1,7 @@
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import { Card, CardContent } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import Phase1Modal from "./Phase1Modal";
 
 interface RoadmapItem {
   phase: string;
@@ -12,6 +14,7 @@ interface RoadmapItem {
 
 const Roadmap = () => {
   const roadmapRef = useRef<HTMLDivElement>(null);
+  const [isPhase1ModalOpen, setIsPhase1ModalOpen] = useState(false);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -36,7 +39,7 @@ const Roadmap = () => {
       phase: "PHASE 01",
       title: "FOUNDATION",
       status: "IN PROGRESS",
-      description: "Platform infrastructure, smart contracts deployment.",
+      description: "Platform infrastructure, Smart Contracts Deployment.",
       features: ["Cyfrin Updraft Blockchain Basics Course", "Blockchain Fundamentals by Chainlink", "Solidity Basics"]
     },
     {
@@ -151,6 +154,18 @@ const Roadmap = () => {
                                 </div>
                               ))}
                             </div>
+                            
+                            {/* Phase 1 Expand Button */}
+                            {item.phase === "PHASE 01" && (
+                              <div className="mt-6">
+                                <Button 
+                                  className="w-full bg-primary hover:bg-primary/90 text-primary-foreground gaming-glow"
+                                  onClick={() => setIsPhase1ModalOpen(true)}
+                                >
+                                  Expand Details
+                                </Button>
+                              </div>
+                            )}
                           </>
                         )}
                       </CardContent>
@@ -186,7 +201,8 @@ const Roadmap = () => {
                 onClick={() => window.open("https://instagram.com/barade_sanjay", "_blank")}>
                   Connect on Instagram
                 </button>
-                <button className="px-6 py-3 border border-accent text-accent hover:bg-accent/10 rounded-lg smooth-transition">
+                <button className="px-6 py-3 bg-primary hover:bg-primary/90 text-primary-foreground rounded-lg gaming-glow smooth-transition"
+                onClick={() => window.open("https://roadmap.sh/blockchain", "_blank")}>
                   View Documentation
                 </button>
               </div>
@@ -194,6 +210,12 @@ const Roadmap = () => {
           </Card>
         </div>
       </div>
+      
+      {/* Phase 1 Modal */}
+      <Phase1Modal 
+        isOpen={isPhase1ModalOpen} 
+        onClose={() => setIsPhase1ModalOpen(false)} 
+      />
     </section>
   );
 };

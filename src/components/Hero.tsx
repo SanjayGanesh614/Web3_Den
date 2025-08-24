@@ -14,7 +14,7 @@ const Hero = () => {
         {/* Main content */}
         <div className="animate-fade-in">
           <div className="mb-8">
-            <h1 className="text-6xl md:text-8xl font-bold mb-4 text-gradient-primary tracking-wider">
+<h1 className="text-4xl md:text-6xl font-bold mb-2 text-gradient-primary tracking-wider">
               CONGRATULATIONS!!
             </h1>
             <h2 className="text-4xl md:text-6xl font-light mb-6 text-gradient-accent">
