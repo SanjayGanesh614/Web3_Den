@@ -19,7 +19,7 @@ const PhotoGallery = () => {
     }, 4000);
     return () => clearInterval(timer);
   }, [images.length]);
-  return <section className="py-20 space-background">
+  return <section id="about" className="py-20">
       <div className="container mx-auto px-6">
         <div className="text-center mb-16 scroll-fade-in">
           <h2 className="text-4xl md:text-5xl font-bold mb-6 text-gradient-primary">About Us</h2>

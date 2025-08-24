@@ -64,7 +64,7 @@ const Phase1Modal = ({ isOpen, onClose }: Phase1ModalProps) => {
             {/* Content Sections */}
             <div className="grid md:grid-cols-2 gap-6 mb-8">
               {phase1ExpandedContent.sections.map((section, index) => (
-                <div key={index} className="glass-morphism p-6 rounded-lg border border-border/50">
+                <div key={index} className="glass-morphism p-6 rounded-lg border border-border/50 hover:scale-105">
                   <h3 className="text-xl font-semibold text-gradient-accent mb-3">
                     {section.title}
                   </h3>
@@ -79,18 +79,41 @@ const Phase1Modal = ({ isOpen, onClose }: Phase1ModalProps) => {
             <div className="bg-secondary/30 p-6 rounded-lg mb-6">
               <h3 className="text-xl font-semibold text-primary mb-4">Key Learning Resources</h3>
               <div className="space-y-3">
-                <div className="flex items-center">
-                  <div className="w-2 h-2 bg-primary rounded-full mr-3 animate-glow-pulse"></div>
-                  <span className="text-muted-foreground">Cyfrin Updraft Blockchain Basics Course</span>
-                </div>
-                <div className="flex items-center">
-                  <div className="w-2 h-2 bg-primary rounded-full mr-3 animate-glow-pulse"></div>
-                  <span className="text-muted-foreground">Blockchain Fundamentals by Chainlink</span>
-                </div>
-                <div className="flex items-center">
-                  <div className="w-2 h-2 bg-primary rounded-full mr-3 animate-glow-pulse"></div>
-                  <span className="text-muted-foreground">Solidity Basics & Smart Contract Development</span>
-                </div>
+                <Button
+                  variant="outline"
+                  className="w-full justify-start text-left h-auto py-3 px-4 hover:bg-primary/10 hover:text-primary smooth-transition"
+                  onClick={() => window.open("https://updraft.cyfrin.io/courses/blockchain-basics", "_blank")}
+                >
+                  <div className="w-2 h-2 bg-primary rounded-full mr-3 animate-glow-pulse flex-shrink-0"></div>
+                  <span>Cyfrin Updraft Blockchain Basics Course</span>
+                </Button>
+                
+                <Button
+                  variant="outline"
+                  className="w-full justify-start text-left h-auto py-3 px-4 hover:bg-primary/10 hover:text-primary smooth-transition"
+                  onClick={() => window.open("https://www.youtube.com/watch?v=qiWGX7SFVd8", "_blank")}
+                >
+                  <div className="w-2 h-2 bg-primary rounded-full mr-3 animate-glow-pulse flex-shrink-0"></div>
+                  <span>Introduction to Solidity and ERC-20s</span>
+                </Button>
+
+                <Button
+                  variant="outline"
+                  className="w-full justify-start text-left h-auto py-3 px-4 hover:bg-primary/10 hover:text-primary smooth-transition"
+                  onClick={() => window.open("https://updraft.cyfrin.io/courses/solidity", "_blank")}
+                >
+                  <div className="w-2 h-2 bg-primary rounded-full mr-3 animate-glow-pulse flex-shrink-0"></div>
+                  <span>Solidity Basics & Smart Contract Development</span>
+                </Button>
+
+                <Button
+                  variant="outline"
+                  className="w-full justify-start text-left h-auto py-3 px-4 hover:bg-primary/10 hover:text-primary smooth-transition"
+                  onClick={() => window.open("https://updraft.cyfrin.io/courses/chainlink-fundamentals", "_blank")}
+                >
+                  <div className="w-2 h-2 bg-primary rounded-full mr-3 animate-glow-pulse flex-shrink-0"></div>
+                  <span>Chainlink Fundamentals</span>
+                </Button>
               </div>
             </div>
 

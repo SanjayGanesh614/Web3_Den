@@ -69,7 +69,7 @@ const Roadmap = () => {
   ];
 
   return (
-    <section className="py-20 space-background" ref={roadmapRef}>
+    <section id="roadmap" className="py-20" ref={roadmapRef}>
       <div className="container mx-auto px-6">
         <div className="text-center mb-16 scroll-fade-in">
           <h2 className="text-4xl md:text-5xl font-bold mb-6 text-gradient-primary">
@@ -115,7 +115,7 @@ const Roadmap = () => {
                               </svg>
                             </div>
                             <p className="text-muted-foreground text-sm">
-                              Complete Phase 1 to unlock
+                              Complete Phase {Number(item.phase.split(' ')[1]) - 1} to unlock
                             </p>
                           </div>
                         ) : (
@@ -184,30 +184,6 @@ const Roadmap = () => {
               </div>
             ))}
           </div>
-        </div>
-
-        {/* Call to action */}
-        <div className="text-center mt-20 scroll-fade-in">
-          <Card className="glass-morphism cyber-shadow max-w-2xl mx-auto">
-            <CardContent className="p-8">
-              <h3 className="text-2xl font-bold mb-4 text-gradient-primary">
-                Ready to Shape the Future?
-              </h3>
-              <p className="text-muted-foreground mb-6">
-                Join our Web3 community—where innovators, explorers, and future-builders connect, learn, and grow together.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <button className="px-6 py-3 bg-primary hover:bg-primary/90 text-primary-foreground rounded-lg gaming-glow smooth-transition"
-                onClick={() => window.open("https://chat.whatsapp.com/Jqx3lGV1cLJH27YVC8WNUM?mode=ems_copy_t", "_blank")}>
-                  Connect on WhatsApp
-                </button>
-                <button className="px-6 py-3 bg-primary hover:bg-primary/90 text-primary-foreground rounded-lg gaming-glow smooth-transition"
-                onClick={() => window.open("https://roadmap.sh/blockchain", "_blank")}>
-                  View Web3 Roadmap
-                </button>
-              </div>
-            </CardContent>
-          </Card>
         </div>
       </div>
       

@@ -1,8 +1,13 @@
+import { useState } from "react";
 import { Button } from "@/components/ui/button";
+import { Card, CardContent } from "@/components/ui/card";
+import CTAModal from "./CTAModal";
 
 const Hero = () => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
   return (
-    <section className="min-h-screen flex items-center justify-center space-background relative overflow-hidden">
+    <section className="min-h-screen flex items-center justify-center relative overflow-hidden">
       <div className="container mx-auto px-6 text-center z-10">
         {/* Animated particles background */}
         <div className="absolute inset-0 overflow-hidden">
@@ -14,11 +19,11 @@ const Hero = () => {
         {/* Main content */}
         <div className="animate-fade-in">
           <div className="mb-8">
-<h1 className="text-4xl md:text-6xl font-bold mb-2 text-gradient-primary tracking-wider">
-              CONGRATULATIONS!!
+<h1 className="text-4xl md:text-8xl font-bold mb-2 text-gradient-primary">
+              WELCOME
             </h1>
-            <h2 className="text-4xl md:text-6xl font-light mb-6 text-gradient-accent">
-              ON FINDING THE
+            <h2 className="text-4xl md:text-5xl font-light mb-2 text-gradient-accent">
+              TO THE
             </h2>
             <h3 className="text-5xl md:text-7xl font-bold text-gradient-primary mb-8">
               WEB3 DEN
@@ -29,7 +34,20 @@ const Hero = () => {
             Welcome to the Web3 Den—where you own your data, explore decentralization, and step into the future of the internet. Join us in building a more open, secure, and user-centric digital world.
             The website is Under Development. Stay Tuned for Updates!
           </p>
-          
+
+          {/* Call to action button */}
+          <div className="scroll-fade-in">
+            <button 
+              className="px-8 py-3 bg-primary hover:bg-primary/90 hover:scale-105 text-2xl text-gradient-foreground rounded-lg gaming-glow smooth-transition"
+              onClick={() => setIsModalOpen(true)}
+            >
+            Connect with us
+            </button>
+          </div>
+          <CTAModal 
+            isOpen={isModalOpen} 
+            onClose={() => setIsModalOpen(false)} 
+          />
         </div>
       </div>
 
